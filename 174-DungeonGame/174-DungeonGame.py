@@ -1,0 +1,1 @@
+dp[i][j] = max(1, prevturn - dungeon[i][j])

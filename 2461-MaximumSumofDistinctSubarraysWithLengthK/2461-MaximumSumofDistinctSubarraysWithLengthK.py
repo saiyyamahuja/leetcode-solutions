@@ -1,4 +1,4 @@
-# Last updated: 30/05/2025, 15:17:31
+# Last updated: 30/05/2025, 15:17:47
 from collections import defaultdict
 
 class Solution:

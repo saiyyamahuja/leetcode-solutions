@@ -1,4 +1,4 @@
-# Last updated: 03/06/2025, 17:44:11
+# Last updated: 04/06/2025, 01:45:05
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         a=0
@@ -8,5 +8,4 @@ class Solution:
             elif i>a:
                 a=i
             a-=1
-        return True
-            
+        return True            

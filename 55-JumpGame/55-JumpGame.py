@@ -1,11 +1,12 @@
+# Last updated: 03/06/2025, 17:44:11
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        gas = 0
-        for n in nums:
-            if gas < 0:
+        a=0
+        for i in nums:
+            if a<0:
                 return False
-            elif n > gas:
-                gas = n
-            gas -= 1
-            
+            elif i>a:
+                a=i
+            a-=1
         return True
+            

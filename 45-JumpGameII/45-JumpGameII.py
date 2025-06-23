@@ -1,4 +1,4 @@
-# Last updated: 24/06/2025, 00:41:28
+# Last updated: 24/06/2025, 00:42:22
 class Solution:
     def jump(self, nums: List[int]) -> int:
         near = far = jumps = 0

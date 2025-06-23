@@ -1,14 +1,19 @@
-# Last updated: 23/06/2025, 14:53:07
+# Last updated: 23/06/2025, 14:53:54
 class Solution:
-    def calPoints(self, operations: List[str]) -> int:
-        stack = []
-        for op in operations:
-            if op == "C":
-                stack.pop()
-            elif op == "D":
-                stack.append(2 * stack[-1])
-            elif op == "+":
-                stack.append(stack[-1] + stack[-2])
-            else:
-                stack.append(int(op))
-        return sum(stack)
+  def calPoints(self, operations: list[str]) -> int:
+    scores = []
+
+    for operation in operations:
+      match operation:
+        case '+':
+          scores.append(scores[-1] + scores[-2])
+        case 'D':
+          scores.append(scores[-1] * 2)
+        case 'C':
+          scores.pop()
+        case default:
+          scores.append(int(operation))
+
+    return sum(scores)
+
+

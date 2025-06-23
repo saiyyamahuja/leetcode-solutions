@@ -1,4 +1,4 @@
-# Last updated: 23/06/2025, 10:22:35
+# Last updated: 23/06/2025, 10:27:55
 class Solution:
     def check(self, nums: List[int]) -> bool:
         n=len(nums)

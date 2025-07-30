@@ -1,9 +1,13 @@
-    def lengthOfLongestSubstringSimpler(self, s):
-        seen = {}
-        left, right = 0, 0
-        longest = 1
-        while right < len(s):
-            longest = max(longest, right - left + 1)
-            seen[s[right]] = right
-            right += 1
-        return longest
+# Last updated: 30/07/2025, 16:19:16
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        char_set=set()
+        l=0
+        res=0
+        for r in range(len(s)):
+            while s[r] in char_set:
+                char_set.remove(s[l])
+                l+=1
+            char_set.add(s[r])
+            res=max(res,r-l+1)
+        return res
